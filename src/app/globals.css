@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-source-serif);
+
+  /* Brand — deep navy from justgetvisible.com (#003465 primary) */
+  --color-brand-50: #eaf1f8;
+  --color-brand-100: #cddff0;
+  --color-brand-200: #9bbee0;
+  --color-brand-300: #639bcb;
+  --color-brand-400: #3a78b1;
+  --color-brand-500: #03498a;
+  --color-brand-600: #003465;
+  --color-brand-700: #002a52;
+  --color-brand-800: #061836;
+  --color-brand-900: #030d1e;
+
+  /* Accent — brand yellow (#F9DD00) */
+  --color-accent-50: #fffbe5;
+  --color-accent-100: #fff5b3;
+  --color-accent-200: #ffea66;
+  --color-accent-300: #fde100;
+  --color-accent-400: #f9dd00;
+  --color-accent-500: #d4bb00;
+  --color-accent-600: #a89500;
+  --color-accent-700: #7a6c00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+}
+
+/* Display headings use Source Serif 4 — apply selectively via the
+   `font-display` utility on hero / page titles in marketing surfaces. */
+.font-display {
+  font-family: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  font-feature-settings: "ss02";
+  letter-spacing: -0.015em;
+}
